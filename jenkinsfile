@@ -14,7 +14,7 @@ pipeline {
         stage('Run API Tests') {
             steps {
 
-                sh 'newman run collections/commentaire.postman_collection.json '
+                sh 'newman run collections/commentaire.postman_collection.json -e environs.postman_collection.json '
             }
         }
     }
